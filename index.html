@@ -1,0 +1,206 @@
+<html>
+<head>
+<title>readme</title>
+</head>
+
+<body>
+<h1 align='center'>Readme</h1>
+<p align='center'>&nbsp;</p>
+
+<ul>
+  <li><a href="#0">1.0 Feature</a></li>
+  <li><a href="#1">1.1 How to add Catagory</a></li>
+  <li><a href="#2">1.2 How to activate Google Analytics</a></li>
+  <li><a href="#3">1.3 How to controll caching</a></li>
+  <li><a href="#3">1.4 Problem Solving.</a></li>
+  <li></li>
+</ul>
+
+
+<p>
+<table width="1000" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td bgcolor="#66CC99"><h2><a name=#1></a>1.0 Feature</h2></td>
+  </tr>
+  <tr> 
+    <td><ul>
+        <li><font face="Times New Roman, Times, serif"> 50+ Rss Feed Already added</font></li>
+        <li><font face="Times New Roman, Times, serif">No Database Require</font></li>
+        <li><font face="Times New Roman, Times, serif">Easily Catagory can be 
+          Increase &amp; Decrease (currently 5 catagory present) </font></li>
+        <li><font face="Times New Roman, Times, serif">Instant Setup</font></li>
+        <li><font face="Times New Roman, Times, serif">Seo Friendly</font></li>
+        <li><font face="Times New Roman, Times, serif">Catagory Based News System</font></li>
+        <li>Gzip Based Caching System</li>
+        <li>Auto Update after every 30 min , It can be update manually at any 
+          time</li>
+        <li>Faster to load site Gzip compression</li>
+        <li>Description are limited to 250 word , Modifiable</li>
+        <li>Seo Information for each catagory can be setup differtnly</li>
+        <li>Easily integrate google adsense</li>
+        <li>Easily Integrate google analytics</li>
+        <li>Feeds with date time;</li>
+        <li>News linkup with main source.</li>
+        <li>Unlimited Catogory</li>
+        <li>Secure</li>
+        <li>Admin panel for caching handling.</li>
+      </ul>
+      <p>&nbsp;</p></td>
+  </tr>
+  <tr> 
+    <td bgcolor="#66CC99"><h2><a name=#2 id="#2"></a>1.1 How to add Catagory</h2></td>
+  </tr>
+  <tr> 
+    <td valign="top"><p>Open list.php file you will get similar code like the 
+        following </p>
+      <p>$Sports_title = &quot;Welcome to the arena of headlines of Sports news&quot;;<br>
+        $Sports_desc = &quot;Welcome to Footbal,world cup,cricket news headlines 
+        at a place &quot; ;<br>
+        $Sports_keyword = &quot;sports,fifa world cup&quot; ;</p>
+      <p><br>
+        $Sports = array<br>
+        (<br>
+        &quot;CNN&quot; =&gt; &quot;http://rss.cnn.com/rss/edition_sport.rss&quot;<br>
+        , &quot;BBC&quot; =&gt; &quot;http://feeds.bbci.co.uk/sport/0/rss.xml?edition=uk&quot;<br>
+        , &quot;Huffingtonpost&quot; =&gt; &quot;http://www.huffingtonpost.com/feeds/verticals/sports/index.xml&quot;<br>
+        , &quot;Theguardian&quot; =&gt; &quot;http://feeds.theguardian.com/theguardian/uk/sport/rss&quot;<br>
+        , &quot;skysports&quot; =&gt; &quot;http://www.skysports.com/rss/0,20514,12341,00.xml&quot;<br>
+        , &quot;Espn&quot; =&gt; &quot;http://sports.espn.go.com/espn/rss/news&quot;<br>
+        , &quot;Foxsport(football)&quot; =&gt; &quot;http://www.foxsportsasia.com/football-rss/&quot;<br>
+        , &quot;Foxsport(cricket)&quot; =&gt; &quot;http://www.foxsportsasia.com/cricket-rss&quot;</p>
+      <p>);</p>
+      <p>&nbsp;</p>
+      <p>Suppose if you would like to add new catagory like Bussiness you need 
+        to change the above code as follow</p>
+      <p>$<strong>Bussiness</strong>_title = &quot;Welcome to the arena of headlines 
+        of Sports news&quot;;<br>
+        $<strong>Bussiness</strong>_desc = &quot;Welcome to Footbal,world cup,cricket 
+        news headlines at a place &quot; ;<br>
+        $<strong>Bussiness</strong>_keyword = &quot;sports,fifa world cup&quot; 
+        ;</p>
+      <p><strong>$Bussiness</strong> = array<br>
+        (<br>
+        &quot;CNN&quot; =&gt; &quot;http://rss.cnn.com/rss/edition_sport.rss&quot;<br>
+        , &quot;BBC&quot; =&gt; &quot;http://feeds.bbci.co.uk/sport/0/rss.xml?edition=uk&quot;<br>
+        , &quot;Huffingtonpost&quot; =&gt; &quot;http://www.huffingtonpost.com/feeds/verticals/sports/index.xml&quot;<br>
+        , &quot;Theguardian&quot; =&gt; &quot;http://feeds.theguardian.com/theguardian/uk/sport/rss&quot;<br>
+        , &quot;skysports&quot; =&gt; &quot;http://www.skysports.com/rss/0,20514,12341,00.xml&quot;<br>
+        , &quot;Espn&quot; =&gt; &quot;http://sports.espn.go.com/espn/rss/news&quot;<br>
+        , &quot;Foxsport(football)&quot; =&gt; &quot;http://www.foxsportsasia.com/football-rss/&quot;<br>
+        , &quot;Foxsport(cricket)&quot; =&gt; &quot;http://www.foxsportsasia.com/cricket-rss&quot;</p>
+      <p>);</p>
+      <p>open config.php file &amp; under menu_name variable add it like</p>
+      <p>$menu_name = array(&quot;Home&quot;,&quot;IT&quot;,&quot;Entertainment&quot;,&quot;Science&quot;,&quot;Sports&quot;);</p>
+      <p>To </p>
+      <p><strong>$menu_name = array(&quot;Home&quot;,&quot;IT&quot;,&quot;Entertainment&quot;,&quot;Science&quot;,&quot;Sports&quot;,&quot;Bussiness&quot;);</strong></p>
+      <p>&nbsp;</p>
+      <p><strong>Open index.php file &amp; add change the following</strong></p>
+      <p> if($news==&quot;IT&quot; or $news==&quot;Entertainment&quot; or $news==&quot;Sports&quot; 
+        or $news==&quot;Science&quot; or $news==&quot;Home&quot;){<br>
+        $new_catagory = $news;<br>
+        }<br>
+        else{<br>
+        $new_catagory = &quot;Home&quot;;<br>
+        }<br>
+      </p>
+      <p>to</p>
+      <p>&nbsp;</p>
+      <p> if($news==&quot;IT&quot; or $news==&quot;Entertainment&quot; or $news==&quot;Sports&quot; 
+        or $news==&quot;Science&quot; or $news==&quot;Home&quot; or $news==&quot;Bussiness&quot;){<br>
+        $new_catagory = $news;<br>
+        }<br>
+        else{<br>
+        $new_catagory = &quot;Home&quot;;<br>
+        }<br>
+      </p>
+      <p><em>So for adding new catagory you have to do</em></p>
+      <p>1. Add its to index.php file</p>
+      <p>2. Config.php ,add it under $menu_name</p>
+      <p>3.Add inside the list.php file </p>
+      <p>&nbsp;</p>
+      <p><strong>This way you can add unlimited catagory</strong></p>
+      <p>&nbsp;</p>
+      <p><br>
+      </p></td>
+  </tr>
+  <tr> 
+    <td bgcolor="#66CC99"><h2><a name=#1></a>1.2 How to activate Google Analytics</h2></td>
+  </tr>
+  <tr> 
+    <td valign="top"> <p>Just open config.php and change </p>
+      <p>$activate_google_anlytics = 0; <br>
+        $activate_google_code = &quot;XXX_XX&quot;;<br>
+      </p>
+      <p>To</p>
+      <p><strong>$activate_google_anlytics = 1; <br>
+        $activate_google_code = &quot;YOUR_ANLYTICS_ID&quot;;</strong><br>
+      </p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p></td>
+  </tr>
+  <tr> 
+    <td bgcolor="#66CC99"><h2><a name=#4 id="#4"></a>1.3 How to Controll caching</h2></td>
+  </tr>
+  <tr> 
+    <td valign="top"> <p>&nbsp;</p>
+      <p>First setup admin_name &amp; admin_pass in confi.php file then just call 
+        the file like this way</p>
+      <p>http://server/reset_all.php?u=admin_name&amp;p=admin_pass </p>
+      <p>thats it. if your admin_name &amp; admin_pass match then all the cache 
+        file will be deleted.</p>
+      <p>&nbsp;</p></td>
+  </tr>
+  <tr> 
+    <td bgcolor="#66CC99"><h2><a name=#1></a>1.4 How to activate Google Analytics</h2></td>
+  </tr>
+  <tr> 
+    <td valign="top"> <p>For any kind of problem plz email me : jewelhuq@gmail.com</p>
+      <p>&nbsp;</p>
+      <p>Just open config.php and change </p>
+      <p>$activate_google_anlytics = 0; <br>
+        $activate_google_code = &quot;XXX_XX&quot;;<br>
+      </p>
+      <p>To</p>
+      <p><strong>$activate_google_anlytics = 1; <br>
+        $activate_google_code = &quot;YOUR_ANLYTICS_ID&quot;;</strong><br>
+      </p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p></td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<p>
+<h1></h1>
+<ul>
+  <li></li>
+</ul>
+<p>
+<p><a name=#1 id="#1"></a> 
+<h3>1.1 How to add new site in this list</h3>
+
+<p>Just open index.php file then</p>
+<p>find the following line</p>
+
+<p>    					   get_data("Fobes", "http://www.forbes.com/fast/feed");</p>
+<p>                        get_data("The Local (Sweden)", "http://www.thelocal.se/RSS/theLocal.xml");</p>
+<p>                        get_data("The Local (Germany)", "http://www.thelocal.de/RSS/theLocal.xml");</p>
+<p>                        get_data("stockholmnews ", "http://www.stockholmnews.com/rss.aspx");</p>
+<p>                        get_data("Aljajeera","http://www.aljazeera.com/Services/Rss/?PostingId=2007731105943979989");</p>
+<p>                        get_data("BBC (UK)","http://feeds.bbci.co.uk/news/rss.xml");</p>
+<p>							If you like to add more then just copy the above line & paste and add your rss feed url as for your example</p>
+
+<p>get_data("Newspaper_title", "Rss_Feed_URL");</p>
+
+
+<br><br><br><br>
+<br>
+<br><br><br>
+
+<a name=#3></a>
+<h3>1.3 . 3 Problem Solving.</h3>
+
+<p>If you face any problem kindly mail me <b>jewelhuq@gmail.com</b>
+</p>
+
